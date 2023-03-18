@@ -1,0 +1,50 @@
+Error 1:
+PS C:\Users\chetb\Onedrive\desktop\All Files\chetInfo_repos\codeJavaSite> npm install -g @angluar/cli
+npm ERR! code E404
+npm ERR! 404 Not Found - GET https://registry.npmjs.org/@angluar%2fcli - Not found
+npm ERR! 404 
+npm ERR! 404  '@angluar/cli@*' is not in this registry.
+npm ERR! 404 
+npm ERR! 404 Note that you can also install from a
+npm ERR! 404 tarball, folder, http url, or git url.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\chetb\AppData\Local\npm-cache\_logs\2023-03-17T18_11_23_
+
+
+
+Solution: 
+
+Try first this commands (in windows run as administrator)
+
+npm config set registry http://registry.npmjs.org
+npm install -g @angular/cli
+if still not working let's update NPM and nodejs by running this commands
+
+npm -g install npm
+npm cache clean -f
+npm install -g n
+then try to run
+
+npm install -g @angular/cli
+This should solve this problem
+
+*************************************************************************
+If none of them help than this problem is due to security in window poweshell so just switch the poweshell to gitbash terminal in 
+visual code and type the following code to create new project
+>ng v (to see version)
+
+>ng new codejavasite (This will create new pro)
+
+> type y and choose for simple css 
+ once the project is created swtich to that folder to run server
+>cd codejavasite
+>ng serve
+ 
+server will start:
+
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+
+
+
