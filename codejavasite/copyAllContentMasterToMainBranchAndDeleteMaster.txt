@@ -1,5 +1,8 @@
 
+Error 1:
 Copy All the Content of Master Branch Into Main Branch and Delete Master Branch:wq
+
+Solution:
 
 git fetch --all                # update all remotes
 git checkout main              # checkout the new main
@@ -8,3 +11,18 @@ git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
     
 git branch -d master           # delete local master
 git branch -rd origin/master
+
+
+
+
+
+Error 2:
+In my case, the error was just fatal: refusing to merge unrelated histories on every try, especially the first pull request after remotely adding a Git repository.
+
+Using the --allow-unrelated-histories flag worked with a pull request in this way:
+
+Solution:
+
+git pull origin branchname --allow-unrelated-histories
+
+Note: First goto main branch and type the above code 
