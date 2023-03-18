@@ -24,5 +24,6 @@ Using the --allow-unrelated-histories flag worked with a pull request in this wa
 Solution:
 
 git pull origin branchname --allow-unrelated-histories
+git pull orign master --allow-unrelated-histories
 
 Note: First goto main branch and type the above code 
